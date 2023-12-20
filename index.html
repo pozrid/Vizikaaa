@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<title>Сайт портфолио</title>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1 class="header__logo">визитка</h1>
+<div class="header__menu menu">
+<button class="menu__btn">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+</button>
+<ul class="menu__list hide">
+<li class="menu__item">
+<a href="#info" class="menu__link">
+О себе
+</a>
+<div class="info">
+    <p>Возраст - 18 лет</p>
+    <p>Место проживания - Хотьково</p>
+</div>
+</li>
+<li class="menu__item">
+<a href="#portfolio" class="menu__link">
+Портфолио
+</a>
+<section id="portfolio">
+    <h3>Лабороторные</h3>
+    <div class="lab">
+        <a href=https://github.com/pozrid/discriminant target="_blank">Лаборато́рная-1</a>
+    </div>
+    <div class="lab">
+        <a href=https://github.com/pozrid/wikiplayer target="_blank">Лаборато́рная-2</a>
+    </div>
+</section>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="info" id="info">
+<h2 class="info__title">О себе</h2>
+<p class="info__fullname">
+Тюхтин Вадим Денисович
+</p>
+<section id="social">
+    <h3>Мои Соц-сети</h3>
+    <div class="soc">
+        <p>Email: <a href="https://mail.ru/" target="_blank">vadimsdf@mail.ru</a></p>
+        <p>Telegram: <a href="https://t.me" target="_blank">@pozrid</a></p>
+        <p><a href=https://vk.com/pozrid target="_blank">Vk</a></p>
+        <p><a href=https://github.com/pozrid target="_blank">GitHub</a></p></div>
+</section>
+
+<div class="portfolio" id="portfolio">
+    <img id="image" style="display:none" src="E:\swagger.png" alt="Сваггер" width="1000" height="500">
+    <button onclick="f()">Открыть портфолио</button>
+    <script>
+        function f(){
+           let elem= document.getElementById('image');
+           let style = getComputedStyle(elem);
+           if (style.display === 'none'){
+            document.getElementById('image').style.display = 'block'
+           } else if(style.display !== 'none') {
+            document.getElementById('image').style.display = 'none'
+           }
+        }
+    </script>
+
+
+<script src="main.js"></script>
+</body>
+</html>
